@@ -18,7 +18,7 @@ function Section({
   descriptionColor,
 }: SectionProps): JSX.Element {
   return (
-    <Container {...{ foregroundColor, backgroundImage }}>
+    <Container {...{ backgroundImage, foregroundColor }}>
       <GroupText>
         <span>
           {title.map((item, index) => (

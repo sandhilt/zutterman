@@ -7,6 +7,8 @@ declare module 'styled-components' {
     lightBrownColor: string;
     blueNavyColor: string;
     lightColor: string;
+    yellowColor: string;
+    mobileWidth: number;
   }
 }
 
@@ -16,4 +18,6 @@ export const themeDefault: DefaultTheme = {
   lightBrownColor: '#716565',
   blueNavyColor: '#506FA9',
   lightColor: '#fff',
+  yellowColor: '#E2E0B8',
+  mobileWidth: 768,
 };

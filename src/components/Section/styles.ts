@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components';
 
 export interface ContainerProps {
-  foregroundColor: string;
   backgroundImage: string;
+  foregroundColor: string;
 }
 
 export interface TextColor {
@@ -18,9 +18,10 @@ export const Container = styled.section<ContainerProps>`
   height: 1024px;
   background-image: url(${(props) => props.backgroundImage});
   background-position: 100% center;
-  mix-blend-mode: multiply;
   background-repeat: no-repeat;
   background-color: ${(props) => props.foregroundColor ?? '#fff'};
+
+  mix-blend-mode: multiply;
 `;
 
 const TextColorCSS = css<TextColor>`

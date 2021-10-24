@@ -2,21 +2,42 @@ import styled from 'styled-components';
 
 export const Container = styled.nav`
   font-family: 'Roboto Condensed', sans-serif;
-  display: grid;
   background-color: ${(props) => props.theme.lightColor};
   font-weight: 300;
   padding: 1rem 3rem;
-  grid-template-columns: minmax(200px, 1fr) 1fr;
+
+  @media (max-width: ${(props) => props.theme.mobileWidth}px) {
+    display: flex;
+  }
+
+  @media (min-width: ${(props) => props.theme.mobileWidth + 1}px) {
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr) 1fr;
+  }
+`;
+
+export const MenuButton = styled.button`
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  margin-right: auto;
+
+  @media (min-width: ${(props) => props.theme.mobileWidth + 1}px) {
+    display: none;
+  }
 `;
 
 export const SectionHome = styled.section`
-  display: grid;
-  grid-template-columns: 1fr auto;
-  margin-right: auto;
-  justify-items: center;
-  align-items: center;
-  column-gap: 1rem;
   color: ${(props) => props.theme.brownColor};
+
+  @media (min-width: ${(props) => props.theme.mobileWidth + 1}px) {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    justify-items: center;
+    align-items: center;
+    margin-right: auto;
+    column-gap: 1rem;
+  }
 `;
 
 export const ImageWrapper = styled.div`
@@ -30,6 +51,10 @@ export const ImageWrapper = styled.div`
 export const Title = styled.h1`
   font-weight: 700;
   font-size: 2.575rem;
+
+  @media (max-width: ${(props) => props.theme.mobileWidth}px) {
+    display: none;
+  }
 `;
 
 export const Subtitle = styled.h2`
@@ -37,6 +62,10 @@ export const Subtitle = styled.h2`
   font-size: 1rem;
   line-height: 1.013rem;
   letter-spacing: 0.338rem;
+
+  @media (max-width: ${(props) => props.theme.mobileWidth}px) {
+    display: none;
+  }
 `;
 
 export const NavbarWrapper = styled.ul`
@@ -49,6 +78,10 @@ export const NavbarWrapper = styled.ul`
   margin: 0;
   list-style: none;
   align-items: center;
+
+  @media (max-width: ${(props) => props.theme.mobileWidth}px) {
+    display: none;
+  }
 `;
 
 export const NavbarItem = styled.li``;
